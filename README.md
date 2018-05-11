@@ -49,11 +49,13 @@ Atom->Packages->Settings->Install->Search
 # SETTING UP YOUR OS TO CONNECT TO THE NETWORK AND CREATE A LAMP SERVER
 
 sudo yum install epel-release
+
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
 rpm -Uvh http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
 
 yum --enablerepo=remi-php72 install php
+
 yum --enablerepo=remi-php72 search php
 
 yum --enablerepo=remi-php72 install php-mysql php-xml \
@@ -62,6 +64,7 @@ php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt
 yum --enablerepo=epel,remi install httpd
 
 systemctl start httpd.service
+
 systemctl enable httpd.service
 
 yum install mysql-server
@@ -71,6 +74,7 @@ sudo yum install mariadb-server
 systemctl start mysqld.service
 
 sudo systemctl enable mariadb
+
 sudo systemctl start mariadb
 
 (YOU WILL BE CREATING YOUR MYSQL PASSWORD HERE MAKE SURE YOU SAVE IT!!!!)
@@ -78,10 +82,13 @@ sudo systemctl start mariadb
 mysql_secure_installation
 
 firewall-cmd --permanent --add-service=mysql
+
 firewall-cmd --reload
 
 firewall-cmd --permanent --zone=public --add-service=http
+
 firewall-cmd --permanent --zone=public --add-service=https
+
 firewall-cmd --reload
 
 ONCE YOUR MYSQL IS INSTALLED TYPE THE FOLLOWING TO GET IN
@@ -101,29 +108,27 @@ YOU CAN NOW INSTALL THE MYSQL WORKBENCH. TYPE ifconfig to figure out what your i
 it would be something like: 
 
 EXAMPLE---
+
 HOST: 192.168.1.20
+
 USERNAME: root (IT WILL ALWAYS BE ROOT UNLESS YOU CREATE ANOTHER USER)
+
 PASSWORD: [MYSQL PASSWORD]
 
 TYPE exit if you havent already in mysql so you can get back to your OS cmd
 
 # LETS MOUT OUR SHARED FOLDER NOW
 
-yum update
-yum install gcc kernel-devel make
-
-yum install bzip2 nano
+yum update;yum install gcc kernel-devel make bzip2 nano
 
 # Click: Devices/Install Guest Additions...
 
-mkdir /cdrom
-mount /dev/cdrom /cdrom
-
-/cdrom/VBoxLinuxAdditions.run
+mkdir /cdrom;mount /dev/cdrom /cdrom;/cdrom/VBoxLinuxAdditions.run
 
 # CREATE SH FILE
-mkdir /var/www/websites
-sudo nano /var/www/mtweb.sh
+mkdir /var/www/websites;sudo nano /var/www/mtweb.sh
+
+PASTE THIS IN THE FILE AND THEN PRESS CTRL+X THEN Y
 
 #!/bin/bash
 echo "Mounting Websites."
@@ -149,17 +154,20 @@ Search "Short" and then turn ShortTag On
 httpd -k restart
 
 # LETS TURN SELINUX OFF
-setenforce 0pip
+
+setenforce 0
+
 nano /etc/sysconfig/selinux
 
-CHANGE SELINUX=enforcing to SELINUX=disabled
+CHANGE "SELINUX=enforcing" to "SELINUX=disabled"
 
 #THINGS YOU SHOULD INSTALL 
 
 yum install git wget python2-pip unzip zip
 
 #SETTING UP STATIC IP ADDRESS
-/etc/sysconfig/network-scripts/ifcfg-enp0s3
+
+sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
 
 IPADDR=192.168.1.200
 NETMASK=255.255.255.0
