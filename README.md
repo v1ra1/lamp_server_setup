@@ -1,17 +1,14 @@
-# lamp_server_setup
-Tutorial For Basic Lamp Server Setup
-
-** STEPS TO SETUP LOCAL ENVIROMENT **
+# **STEPS TO SETUP LOCAL ENVIROMENT**
 
 CREATE FOLDER IN DOCUMENTS CALLED "Github"
 
-#DOWNLOAD CENTOS 7 MINIMAL
+# DOWNLOAD CENTOS 7 MINIMAL
 http://centos.mirror.constant.com/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso
 
-#DOWNLOAD MOBAXTERM FOR YOUR SFTP/SSH CLIENT
+# DOWNLOAD MOBAXTERM FOR YOUR SFTP/SSH CLIENT
 https://download.mobatek.net/10520180106182002/MobaXterm_Installer_v10.5.zip
 
-#DOWNLOAD VIRTUAL BOX
+# DOWNLOAD VIRTUAL BOX
 https://download.virtualbox.org/virtualbox/5.2.12/VirtualBox-5.2.12-122591-Win.exe
 
 New->Name: Twerk,Type: Linux, Version: RedHat (64-bit) (If you do not see this option. You need to enable virtualization in your bios)
@@ -36,10 +33,10 @@ TYPE IFCONFIG IN VIRTUAL BOX ONCE YOU GET TO THE CMD AND THEN TYPE THAT IP IN MO
 
 JUST TYPE IT IN AND WALA YOU WILL ALWAYS HAVE ACCESS TO IT WHILE VIRUTALBOX IS RUNNING NOW.
 
-#DOWNLOAD MYSQL WORKBENCH
+# DOWNLOAD MYSQL WORKBENCH
 https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.10-winx64.msi
 
-#DOWNLOAD ATOM (IDE)
+# DOWNLOAD ATOM (IDE)
 https://atom.io/download/windows_x64
 
 Atom->Packages->Settings->Install->Search
@@ -49,7 +46,7 @@ Atom->Packages->Settings->Install->Search
 - minimap
 - pigments
 
-#SETTING UP YOUR OS TO CONNECT TO THE NETWORK AND CREATE A LAMP SERVER
+# SETTING UP YOUR OS TO CONNECT TO THE NETWORK AND CREATE A LAMP SERVER
 
 sudo yum install epel-release
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
