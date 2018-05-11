@@ -67,9 +67,7 @@ systemctl start httpd.service
 
 systemctl enable httpd.service
 
-yum install mysql-server
-
-sudo yum install mariadb-server
+sudo yum install mysql-server mariadb-server
 
 systemctl start mysqld.service
 
@@ -77,13 +75,13 @@ sudo systemctl enable mariadb
 
 sudo systemctl start mariadb
 
-(YOU WILL BE CREATING YOUR MYSQL PASSWORD HERE MAKE SURE YOU SAVE IT!!!!)
-
-mysql_secure_installation
-
 firewall-cmd --permanent --add-service=mysql
 
 firewall-cmd --reload
+
+(YOU WILL BE CREATING YOUR MYSQL PASSWORD HERE MAKE SURE YOU SAVE IT!!!!)
+
+mysql_secure_installation
 
 firewall-cmd --permanent --zone=public --add-service=http
 
@@ -121,11 +119,12 @@ TYPE exit if you havent already in mysql so you can get back to your OS cmd
 
 yum update;yum install gcc kernel-devel make bzip2 nano
 
-# Click: Devices/Install Guest Additions...
+!!!!Click: Devices/Install Guest Additions (THIS IS IN THE VIRTUAL BOX MENU)!!!
 
 mkdir /cdrom;mount /dev/cdrom /cdrom;/cdrom/VBoxLinuxAdditions.run
 
 # CREATE SH FILE
+
 mkdir /var/www/websites;sudo nano /var/www/mtweb.sh
 
 PASTE THIS IN THE FILE AND THEN PRESS CTRL+X THEN Y
@@ -145,7 +144,7 @@ Change <Directory "/var/www/html"> to <Directory "/var/www/websites">
 
 Change AllowOverride None to AllowOverride All
 
-# Lets configure PHP now
+# LETS CONFIGURE PHP NOW
 
 nano /etc/php.ini
 
@@ -161,7 +160,7 @@ nano /etc/sysconfig/selinux
 
 CHANGE "SELINUX=enforcing" to "SELINUX=disabled"
 
-#THINGS YOU SHOULD INSTALL 
+# THINGS YOU SHOULD INSTALL 
 
 yum install git wget python2-pip unzip zip
 
