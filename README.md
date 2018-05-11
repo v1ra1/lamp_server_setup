@@ -164,7 +164,7 @@ CHANGE "SELINUX=enforcing" to "SELINUX=disabled"
 
 yum install git wget python2-pip unzip zip
 
-#SETTING UP STATIC IP ADDRESS
+# SETTING UP STATIC IP ADDRESS
 
 sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
 
