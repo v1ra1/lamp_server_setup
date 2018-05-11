@@ -50,6 +50,7 @@ Atom->Packages->Settings->Install->Search
 
 sudo yum install epel-release
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+
 rpm -Uvh http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
 
 yum --enablerepo=remi-php72 install php
