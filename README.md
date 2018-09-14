@@ -50,7 +50,7 @@ Atom->Packages->Settings->Install->Search
 
 sudo yum install epel-release
 
-rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 rpm -Uvh http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
 
@@ -67,13 +67,13 @@ systemctl start httpd.service
 
 systemctl enable httpd.service
 
-sudo yum install mysql-server mariadb-server
+sudo yum install mysql-server
 
 systemctl start mysqld.service
 
-sudo systemctl enable mariadb
+sudo systemctl enable mysqld
 
-sudo systemctl start mariadb
+sudo systemctl start mysqld
 
 firewall-cmd --permanent --add-service=mysql
 
@@ -97,7 +97,7 @@ YOU WILL BE PROMPTED FOR YOU PASSWORD NOW...
 
 ONCE YOU ARE LOGGED IN TYPE THE FOLLOWING BELOW BUT REPLACE [MYSQL PASSWORD] with your password for your database
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '[MYSQL PASSWORD]';
+GRANT ALL PRIVILEGES ON [ASTRIX].[ASTRIX] TO 'root'@'%' IDENTIFIED BY '[MYSQL PASSWORD]';
 
 FLUSH PRIVILEGES;
 
