@@ -187,3 +187,7 @@ DNS2=1.1.1.1
 
 DNS3=8.8.4.4
 
+service network restart
+
+apachectl restart
+
