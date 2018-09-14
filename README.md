@@ -137,8 +137,11 @@ mkdir /var/www/websites;sudo nano /var/www/mtweb.sh
 PASTE THIS IN THE FILE AND THEN PRESS CTRL+X THEN Y
 
 #!/bin/bash
+
 echo "Mounting Websites.";
+
 systemctl start httpd;
+
 mount -t vboxsf websites /var/www/websites;
 
 # LETS CHANGE SOME CONFIGS NOW
