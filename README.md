@@ -41,6 +41,11 @@ https://atom.io/download/windows_x64
 
 Atom->Packages->Settings->Install->Search
 
+THEMES:
+SETI
+MONAKI
+
+PACKAGES:
 - color-picker
 - file-icons
 - minimap
