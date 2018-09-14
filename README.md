@@ -143,7 +143,7 @@ mount -t vboxsf websites /var/www/websites
 
 # LETS CHANGE SOME CONFIGS NOW
 
-nano /etc/httpd/conf/httpd.conf
+sudo nano /etc/httpd/conf/httpd.conf
 
 Change DocumentRoot "/var/www/html" to DocumentRoot "/var/www/websites"
 
@@ -153,11 +153,11 @@ Change AllowOverride None to AllowOverride All
 
 # LETS CONFIGURE PHP NOW
 
-nano /etc/php.ini
+sudo nano /etc/php.ini
 
 Search "Short" and then turn ShortTag On
 
-httpd -k restart
+apachectl restart
 
 # LETS TURN SELINUX OFF
 
