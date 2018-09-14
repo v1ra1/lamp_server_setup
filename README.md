@@ -2,14 +2,14 @@
 
 CREATE FOLDER IN DOCUMENTS CALLED "Github"
 
-# DOWNLOAD CENTOS 7 MINIMAL
-http://centos.mirror.constant.com/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso
+# DOWNLOAD CENTOS 7 MINIMAL - CLICK MINIMAL
+https://www.centos.org/download/
 
 # DOWNLOAD MOBAXTERM FOR YOUR SFTP/SSH CLIENT
-https://download.mobatek.net/10520180106182002/MobaXterm_Installer_v10.5.zip
+https://mobaxterm.mobatek.net/download-home-edition.html
 
 # DOWNLOAD VIRTUAL BOX
-https://download.virtualbox.org/virtualbox/5.2.12/VirtualBox-5.2.12-122591-Win.exe
+https://www.virtualbox.org/wiki/Downloads
 
 New->Name: Twerk,Type: Linux, Version: RedHat (64-bit) (If you do not see this option. You need to enable virtualization in your bios)
 
@@ -34,7 +34,7 @@ TYPE IFCONFIG IN VIRTUAL BOX ONCE YOU GET TO THE CMD AND THEN TYPE THAT IP IN MO
 JUST TYPE IT IN AND WALA YOU WILL ALWAYS HAVE ACCESS TO IT WHILE VIRUTALBOX IS RUNNING NOW.
 
 # DOWNLOAD MYSQL WORKBENCH
-https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.10-winx64.msi
+https://dev.mysql.com/downloads/workbench/
 
 # DOWNLOAD ATOM (IDE)
 https://atom.io/download/windows_x64
