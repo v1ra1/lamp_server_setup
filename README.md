@@ -121,6 +121,8 @@ yum update;yum install gcc kernel-devel make bzip2 nano
 
 !!!!Click: Devices/Install Guest Additions (THIS IS IN THE VIRTUAL BOX MENU)!!!
 
+REBOOT
+
 mkdir /cdrom;mount /dev/cdrom /cdrom;/cdrom/VBoxLinuxAdditions.run
 
 # CREATE SH FILE
